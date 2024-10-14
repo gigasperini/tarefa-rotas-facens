@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Login</h2>
+    <form #loginForm="ngForm" class="mx-auto" style="max-width: 400px;">
+      
+      <div class="form-group mb-3">
+        <label for="usuario">Usuário</label>
+        <input type="text" class="form-control" id="usuario" [(ngModel)]="usuario" name="usuario" required placeholder="Digite seu usuário">
+      </div>
+  
+      <div class="form-group mb-3">
+        <label for="senha">Senha</label>
+        <input type="password" class="form-control" id="senha" [(ngModel)]="senha" name="senha" required placeholder="Digite sua senha">
+      </div>
+  
+      <button type="button" class="btn btn-primary btn-block" (click)="onLogin()">Entrar</button>
+  
+      <div *ngIf="mensagemError" class="alert alert-danger mt-3">
+        {{ mensagemError }}
+      </div>
+    </form>
+  </div>
+  
